@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Paris — 13 to 16 July 2026</title>
+<title>Parijs — 13 tot 16 juli 2026</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap');
 
   :root {
     --deep: #1d2433;
-    --accent: #a8324a;       /* muted Parisian rose */
+    --accent: #a8324a;
     --accent-light: #d68aa0;
     --cream: #faf7f2;
     --sand: #f1ebe1;
     --slate: #4a5568;
     --light-border: #e4ded3;
-    --sea: #2a5b7d;          /* Seine blue */
+    --sea: #2a5b7d;
     --sea-light: #eaf1f6;
     --soft: #ffffff;
   }
@@ -30,7 +30,6 @@
     font-size: 15px;
   }
 
-  /* HERO */
   .hero {
     background: linear-gradient(135deg, #1d2433 0%, #2a5b7d 60%, #a8324a 100%);
     color: white;
@@ -69,14 +68,12 @@
     position: relative;
   }
 
-  /* LAYOUT */
   .container {
     max-width: 820px;
     margin: 0 auto;
     padding: 0 24px;
   }
 
-  /* OVERVIEW STRIP */
   .overview {
     background: var(--deep);
     color: white;
@@ -101,7 +98,6 @@
     font-weight: 600;
   }
 
-  /* IDEAS CALLOUT */
   .ideas {
     background: var(--accent);
     color: white;
@@ -128,7 +124,6 @@
     text-decoration: none;
   }
 
-  /* DAY SECTIONS */
   .day {
     padding: 50px 0 30px;
     border-bottom: 1px solid var(--light-border);
@@ -167,7 +162,6 @@
     font-weight: 400;
   }
 
-  /* SECTION HEADINGS */
   h3 {
     font-family: 'Playfair Display', serif;
     font-size: 1.2em;
@@ -179,7 +173,6 @@
     display: inline-block;
   }
 
-  /* TRANSPORT CARD */
   .transport {
     background: var(--sea-light);
     border-left: 4px solid var(--sea);
@@ -207,7 +200,6 @@
     line-height: 1.8;
   }
 
-  /* PLACE CARD */
   .place {
     background: var(--soft);
     border-radius: 10px;
@@ -253,7 +245,6 @@
     line-height: 1.7;
   }
 
-  /* MAP EMBED */
   .map-container {
     border-radius: 10px;
     overflow: hidden;
@@ -268,7 +259,6 @@
     display: block;
   }
 
-  /* EMPTY SLOT */
   .empty-slot {
     background: var(--sand);
     border: 1px dashed var(--light-border);
@@ -292,7 +282,6 @@
     font-weight: 500;
   }
 
-  /* INFO BOX */
   .info-box {
     background: var(--sand);
     border-radius: 8px;
@@ -303,7 +292,6 @@
   }
   .info-box strong { color: var(--deep); }
 
-  /* TIP */
   .tip {
     background: #fef6f4;
     border-left: 4px solid var(--accent);
@@ -320,7 +308,6 @@
     letter-spacing: 1px;
   }
 
-  /* BOOKING REFERENCE */
   .booking-ref {
     background: var(--soft);
     border: 1px dashed var(--light-border);
@@ -342,7 +329,6 @@
     color: var(--deep);
   }
 
-  /* TRAVELERS */
   .travelers {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -368,7 +354,6 @@
     margin-top: 4px;
   }
 
-  /* FOOTER */
   .footer {
     background: var(--deep);
     color: rgba(255,255,255,0.5);
@@ -383,7 +368,6 @@
     margin-top: 6px;
   }
 
-  /* RESPONSIVE */
   @media (max-width: 600px) {
     .hero { padding: 50px 24px 40px; }
     .hero h1 { font-size: 2.3em; }
@@ -393,7 +377,6 @@
     .travelers { grid-template-columns: 1fr; }
   }
 
-  /* PRINT */
   @media print {
     .hero { background: #333 !important; -webkit-print-color-adjust: exact; }
     .map-container { page-break-inside: avoid; }
@@ -404,28 +387,26 @@
 </head>
 <body>
 
-<!-- ============ HERO ============ -->
 <div class="hero">
-  <h1>Paris</h1>
-  <div class="subtitle">A Three-Night Escape</div>
-  <div class="dates">13 &ndash; 16 July 2026 &nbsp;&bull;&nbsp; Louise, Aur&eacute;lie &amp; Anneleen</div>
+  <h1>Parijs</h1>
+  <div class="subtitle">Drie Nachten in de Stad</div>
+  <div class="dates">13 &ndash; 16 juli 2026 &nbsp;&bull;&nbsp; Louise, Aur&eacute;lie &amp; Anneleen</div>
 </div>
 
-<!-- ============ OVERVIEW ============ -->
 <div class="overview">
   <div class="container">
     <div class="overview-grid">
       <div class="overview-item">
-        <div class="label">Nights</div>
+        <div class="label">Nachten</div>
         <div class="value">3 in Batignolles</div>
       </div>
       <div class="overview-item">
-        <div class="label">Travel</div>
-        <div class="value">TGV via Lille</div>
+        <div class="label">Reis</div>
+        <div class="value">TGV via Rijsel</div>
       </div>
       <div class="overview-item">
-        <div class="label">Bastille Day</div>
-        <div class="value">14 July</div>
+        <div class="label">Quatorze Juillet</div>
+        <div class="value">14 juli</div>
       </div>
     </div>
   </div>
@@ -433,81 +414,76 @@
 
 <div class="container">
 
-  <!-- ============ IDEAS CALLOUT ============ -->
   <div class="ideas">
-    <h2>This page is yours to fill</h2>
-    <p>Louise &amp; Aur&eacute;lie &mdash; want a restaurant, a museum, a moment in the day? <a href="mailto:pascal@facon.be?subject=Paris%20trip%20idea">Email Pascal</a> with your idea and it will appear here automatically.</p>
+    <h2>Deze pagina is van jullie</h2>
+    <p>Louise &amp; Aur&eacute;lie &mdash; een restaurant, een museum, een idee voor een moment? <a href="mailto:pascal@facon.be?subject=Parijs%20idee">Mail Pascal</a> en het verschijnt hier vanzelf.</p>
   </div>
 
-  <!-- ============ TRAVELERS ============ -->
   <div class="day" style="padding-top: 40px;">
     <div class="day-header">
       <div class="day-number" style="background: var(--sea);">&#9733;</div>
       <div>
-        <div class="day-title">The Travelers</div>
-        <div class="day-date">Three of you, one room, three single beds</div>
+        <div class="day-title">De Reizigers</div>
+        <div class="day-date">Met z&rsquo;n drie&euml;n, &eacute;&eacute;n kamer, drie eenpersoonsbedden</div>
       </div>
     </div>
 
     <div class="travelers">
       <div class="traveler">
         <div class="traveler-name">Louise Facon</div>
-        <div class="traveler-meta">Born 27 January 2009</div>
+        <div class="traveler-meta">Geboren op 27 januari 2009</div>
       </div>
       <div class="traveler">
         <div class="traveler-name">Aur&eacute;lie Facon</div>
-        <div class="traveler-meta">Born 3 August 2011</div>
+        <div class="traveler-meta">Geboren op 3 augustus 2011</div>
       </div>
       <div class="traveler">
         <div class="traveler-name">Anneleen De Paepe</div>
-        <div class="traveler-meta">Born 2 July 1978</div>
+        <div class="traveler-meta">Geboren op 2 juli 1978</div>
       </div>
     </div>
   </div>
 
-  <!-- ============ DAY 1 ============ -->
   <div class="day">
     <div class="day-header">
       <div class="day-number">1</div>
       <div>
-        <div class="day-title">Arrival in Paris</div>
-        <div class="day-date">Monday, 13 July 2026</div>
+        <div class="day-title">Aankomst in Parijs</div>
+        <div class="day-date">Maandag 13 juli 2026</div>
       </div>
     </div>
 
-    <!-- TRAIN OUT -->
     <div class="transport">
-      <div class="transport-label">Train &mdash; Outbound</div>
+      <div class="transport-label">Trein &mdash; Heen</div>
       <div class="transport-route">Lille Flandres &rarr; Paris Nord</div>
       <div class="transport-details">
-        SNCF &nbsp;&bull;&nbsp; Departure <em>to be confirmed</em> &nbsp;&bull;&nbsp; Arrival <em>to be confirmed</em><br>
-        Reservation: <strong>DQZRMB</strong> &nbsp;&bull;&nbsp; Order: HP5267587744 &nbsp;&bull;&nbsp; Total &euro;204 for three
+        SNCF &nbsp;&bull;&nbsp; Vertrek <em>nog te bevestigen</em> &nbsp;&bull;&nbsp; Aankomst <em>nog te bevestigen</em><br>
+        Reservatie: <strong>DQZRMB</strong> &nbsp;&bull;&nbsp; Bestelling: HP5267587744 &nbsp;&bull;&nbsp; Totaal &euro;204 voor drie
       </div>
     </div>
 
     <div class="transport">
-      <div class="transport-label">From Paris Nord to the hotel</div>
-      <div class="transport-route">M&eacute;tro line 2 &rarr; Brochant or La Fourche</div>
+      <div class="transport-label">Van Paris Nord naar het hotel</div>
+      <div class="transport-route">Metro 2 &rarr; overstap La Fourche &rarr; metro 13 &rarr; Brochant</div>
       <div class="transport-details">
-        Direct on M2 westbound &nbsp;&bull;&nbsp; ~12 min &nbsp;&bull;&nbsp; one t+ ticket each (~&euro;2.15)
+        Met de metro ongeveer 15 minuten &nbsp;&bull;&nbsp; &eacute;&eacute;n t+ ticket per persoon (~&euro;2,15) &nbsp;&bull;&nbsp; met de taxi 15&ndash;20&nbsp;min, &euro;15&ndash;20
       </div>
     </div>
 
-    <!-- HOTEL -->
-    <h3>Your Hotel</h3>
+    <h3>Jullie hotel</h3>
 
     <div class="place">
-      <div class="place-type">Accommodation &mdash; 3 nights</div>
+      <div class="place-type">Logies &mdash; 3 nachten</div>
       <div class="place-name"><a href="https://maps.google.com/?q=ibis+Styles+Paris+Batignolles" target="_blank">ibis Styles Paris Batignolles</a></div>
       <div class="place-address">
-        <a href="https://maps.google.com/?q=119+Avenue+de+Clichy,+75017+Paris" target="_blank">119 Avenue de Clichy, 75017 Paris</a> &nbsp;&bull;&nbsp; +33 1 46 27 28 04
+        <a href="https://maps.google.com/?q=119+Avenue+de+Clichy,+75017+Paris" target="_blank">119 Avenue de Clichy, 75017 Parijs</a> &nbsp;&bull;&nbsp; +33 1 46 27 28 04
       </div>
-      <div class="place-desc">Friendly, modern hotel in the 17<sup>th</sup>, on the edge of the lively Batignolles quartier. One room with three single beds. Breakfast included every morning.</div>
+      <div class="place-desc">Vriendelijk, modern hotel in het 17<sup>de</sup> arrondissement, vlak bij de gezellige wijk Batignolles. E&eacute;n kamer met drie eenpersoonsbedden. Ontbijt elke ochtend inbegrepen.</div>
       <div class="booking-ref">
         <div><span class="ref-label">Accor (ALL)</span><br><span class="ref-value">QCHHDHHZ</span></div>
-        <div><span class="ref-label">Total</span><br><span class="ref-value">&euro;594.12 (pay at hotel)</span></div>
-        <div><span class="ref-label">Check-in</span><br><span class="ref-value">13 Jul, from 14:00</span></div>
-        <div><span class="ref-label">Check-out</span><br><span class="ref-value">16 Jul, by 12:00</span></div>
+        <div><span class="ref-label">Totaal</span><br><span class="ref-value">&euro;594,12 (te betalen in hotel)</span></div>
+        <div><span class="ref-label">Check-in</span><br><span class="ref-value">13 juli, vanaf 14:00</span></div>
+        <div><span class="ref-label">Check-out</span><br><span class="ref-value">16 juli, voor 12:00</span></div>
       </div>
     </div>
 
@@ -515,135 +491,129 @@
       <iframe src="https://www.google.com/maps?q=119+Avenue+de+Clichy,+75017+Paris&output=embed" allowfullscreen="" loading="lazy"></iframe>
     </div>
 
-    <!-- AFTERNOON IDEAS -->
-    <h3>Afternoon &amp; Evening</h3>
+    <h3>Namiddag &amp; avond</h3>
     <div class="empty-slot">
-      <strong>Nothing planned yet</strong>
-      What would you like to do after dropping the bags? <em>Email Pascal</em> with a restaurant, a walk, a viewpoint &mdash; whatever you fancy &mdash; and it will appear right here.
+      <strong>Nog niets gepland</strong>
+      Wat willen jullie doen nadat de koffers in het hotel staan? <em>Mail Pascal</em> met een restaurant, een wandeling, een uitzicht &mdash; en het komt hier te staan.
     </div>
   </div>
 
-  <!-- ============ DAY 2 ============ -->
   <div class="day">
     <div class="day-header">
       <div class="day-number">2</div>
       <div>
-        <div class="day-title">Bastille Day</div>
-        <div class="day-date">Tuesday, 14 July 2026 &mdash; F&ecirc;te Nationale</div>
+        <div class="day-title">Quatorze Juillet</div>
+        <div class="day-date">Dinsdag 14 juli 2026 &mdash; Franse nationale feestdag</div>
       </div>
     </div>
 
     <div class="tip">
-      <div class="tip-label">Worth knowing</div>
-      It&rsquo;s the French national day. Morning military parade on the Champs-&Eacute;lys&eacute;es, fireworks at the Eiffel Tower in the evening, and the Bal des Pompiers (firemen&rsquo;s ball) the night before and night of. Many museums are open, but the city is busy &mdash; expect crowds and metro disruptions near official events.
+      <div class="tip-label">Goed om te weten</div>
+      Het is de Franse nationale feestdag. &rsquo;s Ochtends het militaire defil&eacute; op de Champs-&Eacute;lys&eacute;es, &rsquo;s avonds vuurwerk aan de Eiffeltoren, en de Bal des Pompiers (brandweerbal) de avond ervoor en die avond zelf. Veel musea zijn open, maar de stad is druk &mdash; reken op volle straten en metrohinder rond de officiële plekken.
     </div>
 
-    <h3>Morning</h3>
+    <h3>Ochtend</h3>
     <div class="empty-slot">
-      <strong>Up to you</strong>
-      <em>Email Pascal</em> to add a plan for the morning.
+      <strong>Aan jullie</strong>
+      <em>Mail Pascal</em> om een plan voor de ochtend toe te voegen.
     </div>
 
-    <h3>Afternoon</h3>
+    <h3>Namiddag</h3>
     <div class="empty-slot">
-      <strong>Up to you</strong>
-      <em>Email Pascal</em> to add a plan for the afternoon.
+      <strong>Aan jullie</strong>
+      <em>Mail Pascal</em> om een plan voor de namiddag toe te voegen.
     </div>
 
-    <h3>Evening</h3>
+    <h3>Avond</h3>
     <div class="empty-slot">
-      <strong>Up to you</strong>
-      <em>Email Pascal</em> to add a plan for the evening &mdash; dinner, fireworks, something quieter.
+      <strong>Aan jullie</strong>
+      <em>Mail Pascal</em> om een plan voor de avond toe te voegen &mdash; eten, vuurwerk, of iets rustigers.
     </div>
   </div>
 
-  <!-- ============ DAY 3 ============ -->
   <div class="day">
     <div class="day-header">
       <div class="day-number">3</div>
       <div>
-        <div class="day-title">A full day in Paris</div>
-        <div class="day-date">Wednesday, 15 July 2026</div>
+        <div class="day-title">Een volle dag in Parijs</div>
+        <div class="day-date">Woensdag 15 juli 2026</div>
       </div>
     </div>
 
-    <h3>Morning</h3>
+    <h3>Ochtend</h3>
     <div class="empty-slot">
-      <strong>Up to you</strong>
-      <em>Email Pascal</em> to add a plan for the morning.
+      <strong>Aan jullie</strong>
+      <em>Mail Pascal</em> om een plan voor de ochtend toe te voegen.
     </div>
 
-    <h3>Afternoon</h3>
+    <h3>Namiddag</h3>
     <div class="empty-slot">
-      <strong>Up to you</strong>
-      <em>Email Pascal</em> to add a plan for the afternoon.
+      <strong>Aan jullie</strong>
+      <em>Mail Pascal</em> om een plan voor de namiddag toe te voegen.
     </div>
 
-    <h3>Evening</h3>
+    <h3>Avond</h3>
     <div class="empty-slot">
-      <strong>Up to you</strong>
-      <em>Email Pascal</em> to add a plan for the evening.
+      <strong>Aan jullie</strong>
+      <em>Mail Pascal</em> om een plan voor de avond toe te voegen.
     </div>
   </div>
 
-  <!-- ============ DAY 4 ============ -->
   <div class="day">
     <div class="day-header">
       <div class="day-number">4</div>
       <div>
-        <div class="day-title">Paris &rarr; Home</div>
-        <div class="day-date">Thursday, 16 July 2026</div>
+        <div class="day-title">Parijs &rarr; Thuis</div>
+        <div class="day-date">Donderdag 16 juli 2026</div>
       </div>
     </div>
 
-    <h3>Morning</h3>
+    <h3>Ochtend</h3>
     <div class="empty-slot">
-      <strong>One last morning in Paris</strong>
-      <em>Email Pascal</em> with a final stop &mdash; a market, a caf&eacute;, a view &mdash; before the train home.
+      <strong>E&eacute;n laatste ochtend in Parijs</strong>
+      <em>Mail Pascal</em> met een laatste stop &mdash; een markt, een caf&eacute;, een uitzicht &mdash; voor de trein terug.
     </div>
 
-    <!-- TRAIN BACK -->
     <div class="transport">
-      <div class="transport-label">Train &mdash; Return</div>
+      <div class="transport-label">Trein &mdash; Terug</div>
       <div class="transport-route">Paris Nord &rarr; Lille Flandres</div>
       <div class="transport-details">
-        SNCF &nbsp;&bull;&nbsp; Departure <em>to be confirmed</em> &nbsp;&bull;&nbsp; Arrival <em>to be confirmed</em><br>
-        Reservation: <strong>DQZRMB</strong>
+        SNCF &nbsp;&bull;&nbsp; Vertrek <em>nog te bevestigen</em> &nbsp;&bull;&nbsp; Aankomst <em>nog te bevestigen</em><br>
+        Reservatie: <strong>DQZRMB</strong>
       </div>
     </div>
   </div>
 
-  <!-- ============ PRACTICAL INFO ============ -->
   <div class="day">
     <div class="day-header">
       <div class="day-number" style="background: var(--sea);">&infin;</div>
       <div>
-        <div class="day-title">Practical Info</div>
-        <div class="day-date">Good to know</div>
+        <div class="day-title">Praktisch</div>
+        <div class="day-date">Goed om te weten</div>
       </div>
     </div>
 
     <div class="info-box">
-      <strong>Getting around:</strong> The hotel is 2 min from m&eacute;tro <em>Brochant</em> (line 13) and 6 min from <em>La Fourche</em> (lines 13 and 13B). A carnet of 10 t+ tickets is around &euro;17 &mdash; better value than buying singles. The Navigo Easy card is a cheap reloadable alternative.
+      <strong>Verplaatsen:</strong> Het hotel ligt op 2 min van metro <em>Brochant</em> (lijn 13) en 6 min van <em>La Fourche</em> (lijnen 13 en 13B). Een <em>carnet</em> van 10 t+ tickets kost rond de &euro;17 &mdash; goedkoper dan los kopen. De Navigo Easy-kaart is een herlaadbare optie.
     </div>
 
     <div class="info-box">
-      <strong>Neighbourhood &mdash; Batignolles:</strong> A villagey corner of the 17<sup>th</sup>. Daily market on Rue Lemercier, Parc Martin Luther King for greenery, lots of cafés and small restaurants. Quiet by Paris standards, still very walkable to central sights.
+      <strong>De buurt &mdash; Batignolles:</strong> Een dorpse hoek van het 17<sup>de</sup>. Dagelijkse markt op de Rue Lemercier, het Parc Martin Luther King voor wat groen, en veel kleine caf&eacute;s en restaurantjes. Rustig naar Parijse normen, maar nog steeds binnen wandelafstand van het centrum.
     </div>
 
     <div class="info-box">
-      <strong>Money:</strong> Cards work almost everywhere, contactless included. Some small bakeries and markets still want cash &mdash; keep a few coins.
+      <strong>Geld:</strong> Kaarten werken bijna overal, contactloos inbegrepen. Sommige kleine bakkers en marktkraampjes willen nog cash &mdash; hou een paar muntjes bij de hand.
     </div>
 
     <div class="info-box">
-      <strong>Weather in mid-July:</strong> Typically 20&ndash;28&deg;C, occasional warmer days. Light clothes, comfortable shoes, a small bottle of water.
+      <strong>Weer half juli:</strong> Meestal 20&ndash;28&deg;C, soms warmer. Lichte kleren, comfortabele schoenen, een waterflesje.
     </div>
 
-    <h3>All Booking References</h3>
+    <h3>Alle reservatiecodes</h3>
 
     <div class="booking-ref" style="grid-template-columns: 1fr 1fr;">
       <div>
-        <span class="ref-label">SNCF train</span><br>
+        <span class="ref-label">SNCF trein</span><br>
         <span class="ref-value">DQZRMB</span>
       </div>
       <div>
@@ -652,19 +622,18 @@
       </div>
     </div>
 
-    <h3>Emergency Numbers</h3>
+    <h3>Noodnummers</h3>
     <div class="info-box">
-      <strong>European emergency:</strong> 112<br>
+      <strong>Europees noodnummer:</strong> 112<br>
       <strong>ibis Styles Batignolles:</strong> +33 1 46 27 28 04<br>
-      <strong>Pascal:</strong> reachable any time
+      <strong>Pascal:</strong> altijd bereikbaar
     </div>
   </div>
 </div>
 
-<!-- ============ FOOTER ============ -->
 <div class="footer">
-  Paris &nbsp;&bull;&nbsp; 13&ndash;16 July 2026 &nbsp;&bull;&nbsp; Louise, Aur&eacute;lie &amp; Anneleen
-  <div class="updated">Last updated automatically from email</div>
+  Parijs &nbsp;&bull;&nbsp; 13&ndash;16 juli 2026 &nbsp;&bull;&nbsp; Louise, Aur&eacute;lie &amp; Anneleen
+  <div class="updated">Automatisch bijgewerkt via e-mail</div>
 </div>
 
 </body>
