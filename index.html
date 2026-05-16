@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paris — 13 to 16 July 2026</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+  :root {
+    --deep: #1d2433;
+    --accent: #a8324a;       /* muted Parisian rose */
+    --accent-light: #d68aa0;
+    --cream: #faf7f2;
+    --sand: #f1ebe1;
+    --slate: #4a5568;
+    --light-border: #e4ded3;
+    --sea: #2a5b7d;          /* Seine blue */
+    --sea-light: #eaf1f6;
+    --soft: #ffffff;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    color: var(--deep);
+    background: var(--cream);
+    line-height: 1.7;
+    font-size: 15px;
+  }
+
+  /* HERO */
+  .hero {
+    background: linear-gradient(135deg, #1d2433 0%, #2a5b7d 60%, #a8324a 100%);
+    color: white;
+    padding: 80px 40px 60px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    opacity: 0.6;
+  }
+  .hero h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 3.4em;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    margin-bottom: 8px;
+    position: relative;
+  }
+  .hero .subtitle {
+    font-size: 1.1em;
+    font-weight: 300;
+    opacity: 0.92;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    position: relative;
+  }
+  .hero .dates {
+    margin-top: 22px;
+    font-size: 0.95em;
+    opacity: 0.85;
+    position: relative;
+  }
+
+  /* LAYOUT */
+  .container {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* OVERVIEW STRIP */
+  .overview {
+    background: var(--deep);
+    color: white;
+    padding: 30px 0;
+  }
+  .overview-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    text-align: center;
+  }
+  .overview-item .label {
+    font-size: 0.7em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: 0.6;
+    margin-bottom: 4px;
+  }
+  .overview-item .value {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25em;
+    font-weight: 600;
+  }
+
+  /* IDEAS CALLOUT */
+  .ideas {
+    background: var(--accent);
+    color: white;
+    padding: 22px 28px;
+    margin: 30px 0 10px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 14px rgba(168, 50, 74, 0.18);
+  }
+  .ideas h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4em;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+  .ideas p {
+    font-size: 0.95em;
+    opacity: 0.95;
+  }
+  .ideas a {
+    color: white;
+    font-weight: 600;
+    border-bottom: 1px solid rgba(255,255,255,0.5);
+    text-decoration: none;
+  }
+
+  /* DAY SECTIONS */
+  .day {
+    padding: 50px 0 30px;
+    border-bottom: 1px solid var(--light-border);
+  }
+  .day:last-of-type { border-bottom: none; }
+
+  .day-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 30px;
+  }
+  .day-number {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4em;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+  .day-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.7em;
+    font-weight: 600;
+    color: var(--deep);
+  }
+  .day-date {
+    font-size: 0.85em;
+    color: var(--slate);
+    font-weight: 400;
+  }
+
+  /* SECTION HEADINGS */
+  h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2em;
+    font-weight: 600;
+    color: var(--deep);
+    margin: 35px 0 15px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid var(--accent-light);
+    display: inline-block;
+  }
+
+  /* TRANSPORT CARD */
+  .transport {
+    background: var(--sea-light);
+    border-left: 4px solid var(--sea);
+    border-radius: 0 8px 8px 0;
+    padding: 18px 22px;
+    margin: 20px 0;
+  }
+  .transport-label {
+    font-size: 0.7em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--sea);
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+  .transport-route {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+  .transport-details {
+    font-size: 0.9em;
+    color: var(--slate);
+    line-height: 1.8;
+  }
+
+  /* PLACE CARD */
+  .place {
+    background: var(--soft);
+    border-radius: 10px;
+    padding: 20px 22px;
+    margin: 14px 0;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    border: 1px solid var(--light-border);
+  }
+  .place-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1em;
+    font-weight: 600;
+    color: var(--deep);
+  }
+  .place-name a {
+    color: var(--deep);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent-light);
+  }
+  .place-name a:hover { color: var(--accent); }
+  .place-type {
+    display: inline-block;
+    font-size: 0.7em;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+  .place-address {
+    font-size: 0.85em;
+    color: var(--slate);
+    margin-bottom: 8px;
+  }
+  .place-address a {
+    color: var(--sea);
+    text-decoration: none;
+  }
+  .place-address a:hover { text-decoration: underline; }
+  .place-desc {
+    font-size: 0.92em;
+    color: #374151;
+    line-height: 1.7;
+  }
+
+  /* MAP EMBED */
+  .map-container {
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 20px 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border: 1px solid var(--light-border);
+  }
+  .map-container iframe {
+    width: 100%;
+    height: 300px;
+    border: 0;
+    display: block;
+  }
+
+  /* EMPTY SLOT */
+  .empty-slot {
+    background: var(--sand);
+    border: 1px dashed var(--light-border);
+    border-radius: 10px;
+    padding: 28px 22px;
+    margin: 16px 0;
+    text-align: center;
+    color: var(--slate);
+    font-size: 0.95em;
+  }
+  .empty-slot strong {
+    display: block;
+    color: var(--deep);
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1em;
+    margin-bottom: 6px;
+  }
+  .empty-slot em {
+    color: var(--accent);
+    font-style: normal;
+    font-weight: 500;
+  }
+
+  /* INFO BOX */
+  .info-box {
+    background: var(--sand);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 16px 0;
+    font-size: 0.9em;
+    color: var(--slate);
+  }
+  .info-box strong { color: var(--deep); }
+
+  /* TIP */
+  .tip {
+    background: #fef6f4;
+    border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0;
+    padding: 14px 18px;
+    margin: 16px 0;
+    font-size: 0.9em;
+  }
+  .tip-label {
+    font-weight: 600;
+    color: var(--accent);
+    font-size: 0.8em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  /* BOOKING REFERENCE */
+  .booking-ref {
+    background: var(--soft);
+    border: 1px dashed var(--light-border);
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin: 14px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    font-size: 0.88em;
+  }
+  .booking-ref .ref-label {
+    color: var(--slate);
+    font-size: 0.8em;
+  }
+  .booking-ref .ref-value {
+    font-weight: 600;
+    font-family: 'SF Mono', 'Consolas', monospace;
+    color: var(--deep);
+  }
+
+  /* TRAVELERS */
+  .travelers {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin: 22px 0;
+  }
+  .traveler {
+    background: var(--soft);
+    border: 1px solid var(--light-border);
+    border-radius: 10px;
+    padding: 18px 14px;
+    text-align: center;
+  }
+  .traveler-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1em;
+    font-weight: 600;
+    color: var(--deep);
+  }
+  .traveler-meta {
+    font-size: 0.8em;
+    color: var(--slate);
+    margin-top: 4px;
+  }
+
+  /* FOOTER */
+  .footer {
+    background: var(--deep);
+    color: rgba(255,255,255,0.5);
+    text-align: center;
+    padding: 30px;
+    font-size: 0.8em;
+  }
+  .footer .updated {
+    font-family: 'SF Mono', 'Consolas', monospace;
+    opacity: 0.5;
+    font-size: 0.85em;
+    margin-top: 6px;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 600px) {
+    .hero { padding: 50px 24px 40px; }
+    .hero h1 { font-size: 2.3em; }
+    .overview-grid { grid-template-columns: 1fr; gap: 12px; }
+    .day-title { font-size: 1.4em; }
+    .booking-ref { grid-template-columns: 1fr; }
+    .travelers { grid-template-columns: 1fr; }
+  }
+
+  /* PRINT */
+  @media print {
+    .hero { background: #333 !important; -webkit-print-color-adjust: exact; }
+    .map-container { page-break-inside: avoid; }
+    .day { page-break-inside: avoid; }
+    .ideas { background: #f5f5f5 !important; color: #333 !important; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ HERO ============ -->
+<div class="hero">
+  <h1>Paris</h1>
+  <div class="subtitle">A Three-Night Escape</div>
+  <div class="dates">13 &ndash; 16 July 2026 &nbsp;&bull;&nbsp; Louise, Aur&eacute;lie &amp; Anneleen</div>
+</div>
+
+<!-- ============ OVERVIEW ============ -->
+<div class="overview">
+  <div class="container">
+    <div class="overview-grid">
+      <div class="overview-item">
+        <div class="label">Nights</div>
+        <div class="value">3 in Batignolles</div>
+      </div>
+      <div class="overview-item">
+        <div class="label">Travel</div>
+        <div class="value">TGV via Lille</div>
+      </div>
+      <div class="overview-item">
+        <div class="label">Bastille Day</div>
+        <div class="value">14 July</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- ============ IDEAS CALLOUT ============ -->
+  <div class="ideas">
+    <h2>This page is yours to fill</h2>
+    <p>Louise &amp; Aur&eacute;lie &mdash; want a restaurant, a museum, a moment in the day? <a href="mailto:pascal@facon.be?subject=Paris%20trip%20idea">Email Pascal</a> with your idea and it will appear here automatically.</p>
+  </div>
+
+  <!-- ============ TRAVELERS ============ -->
+  <div class="day" style="padding-top: 40px;">
+    <div class="day-header">
+      <div class="day-number" style="background: var(--sea);">&#9733;</div>
+      <div>
+        <div class="day-title">The Travelers</div>
+        <div class="day-date">Three of you, one room, three single beds</div>
+      </div>
+    </div>
+
+    <div class="travelers">
+      <div class="traveler">
+        <div class="traveler-name">Louise Facon</div>
+        <div class="traveler-meta">Born 27 January 2009</div>
+      </div>
+      <div class="traveler">
+        <div class="traveler-name">Aur&eacute;lie Facon</div>
+        <div class="traveler-meta">Born 3 August 2011</div>
+      </div>
+      <div class="traveler">
+        <div class="traveler-name">Anneleen De Paepe</div>
+        <div class="traveler-meta">Born 2 July 1978</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ DAY 1 ============ -->
+  <div class="day">
+    <div class="day-header">
+      <div class="day-number">1</div>
+      <div>
+        <div class="day-title">Arrival in Paris</div>
+        <div class="day-date">Monday, 13 July 2026</div>
+      </div>
+    </div>
+
+    <!-- TRAIN OUT -->
+    <div class="transport">
+      <div class="transport-label">Train &mdash; Outbound</div>
+      <div class="transport-route">Lille Flandres &rarr; Paris Nord</div>
+      <div class="transport-details">
+        SNCF &nbsp;&bull;&nbsp; Departure <em>to be confirmed</em> &nbsp;&bull;&nbsp; Arrival <em>to be confirmed</em><br>
+        Reservation: <strong>DQZRMB</strong> &nbsp;&bull;&nbsp; Order: HP5267587744 &nbsp;&bull;&nbsp; Total &euro;204 for three
+      </div>
+    </div>
+
+    <div class="transport">
+      <div class="transport-label">From Paris Nord to the hotel</div>
+      <div class="transport-route">M&eacute;tro line 2 &rarr; Brochant or La Fourche</div>
+      <div class="transport-details">
+        Direct on M2 westbound &nbsp;&bull;&nbsp; ~12 min &nbsp;&bull;&nbsp; one t+ ticket each (~&euro;2.15)
+      </div>
+    </div>
+
+    <!-- HOTEL -->
+    <h3>Your Hotel</h3>
+
+    <div class="place">
+      <div class="place-type">Accommodation &mdash; 3 nights</div>
+      <div class="place-name"><a href="https://maps.google.com/?q=ibis+Styles+Paris+Batignolles" target="_blank">ibis Styles Paris Batignolles</a></div>
+      <div class="place-address">
+        <a href="https://maps.google.com/?q=119+Avenue+de+Clichy,+75017+Paris" target="_blank">119 Avenue de Clichy, 75017 Paris</a> &nbsp;&bull;&nbsp; +33 1 46 27 28 04
+      </div>
+      <div class="place-desc">Friendly, modern hotel in the 17<sup>th</sup>, on the edge of the lively Batignolles quartier. One room with three single beds. Breakfast included every morning.</div>
+      <div class="booking-ref">
+        <div><span class="ref-label">Accor (ALL)</span><br><span class="ref-value">QCHHDHHZ</span></div>
+        <div><span class="ref-label">Total</span><br><span class="ref-value">&euro;594.12 (pay at hotel)</span></div>
+        <div><span class="ref-label">Check-in</span><br><span class="ref-value">13 Jul, from 14:00</span></div>
+        <div><span class="ref-label">Check-out</span><br><span class="ref-value">16 Jul, by 12:00</span></div>
+      </div>
+    </div>
+
+    <div class="map-container">
+      <iframe src="https://www.google.com/maps?q=119+Avenue+de+Clichy,+75017+Paris&output=embed" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+    <!-- AFTERNOON IDEAS -->
+    <h3>Afternoon &amp; Evening</h3>
+    <div class="empty-slot">
+      <strong>Nothing planned yet</strong>
+      What would you like to do after dropping the bags? <em>Email Pascal</em> with a restaurant, a walk, a viewpoint &mdash; whatever you fancy &mdash; and it will appear right here.
+    </div>
+  </div>
+
+  <!-- ============ DAY 2 ============ -->
+  <div class="day">
+    <div class="day-header">
+      <div class="day-number">2</div>
+      <div>
+        <div class="day-title">Bastille Day</div>
+        <div class="day-date">Tuesday, 14 July 2026 &mdash; F&ecirc;te Nationale</div>
+      </div>
+    </div>
+
+    <div class="tip">
+      <div class="tip-label">Worth knowing</div>
+      It&rsquo;s the French national day. Morning military parade on the Champs-&Eacute;lys&eacute;es, fireworks at the Eiffel Tower in the evening, and the Bal des Pompiers (firemen&rsquo;s ball) the night before and night of. Many museums are open, but the city is busy &mdash; expect crowds and metro disruptions near official events.
+    </div>
+
+    <h3>Morning</h3>
+    <div class="empty-slot">
+      <strong>Up to you</strong>
+      <em>Email Pascal</em> to add a plan for the morning.
+    </div>
+
+    <h3>Afternoon</h3>
+    <div class="empty-slot">
+      <strong>Up to you</strong>
+      <em>Email Pascal</em> to add a plan for the afternoon.
+    </div>
+
+    <h3>Evening</h3>
+    <div class="empty-slot">
+      <strong>Up to you</strong>
+      <em>Email Pascal</em> to add a plan for the evening &mdash; dinner, fireworks, something quieter.
+    </div>
+  </div>
+
+  <!-- ============ DAY 3 ============ -->
+  <div class="day">
+    <div class="day-header">
+      <div class="day-number">3</div>
+      <div>
+        <div class="day-title">A full day in Paris</div>
+        <div class="day-date">Wednesday, 15 July 2026</div>
+      </div>
+    </div>
+
+    <h3>Morning</h3>
+    <div class="empty-slot">
+      <strong>Up to you</strong>
+      <em>Email Pascal</em> to add a plan for the morning.
+    </div>
+
+    <h3>Afternoon</h3>
+    <div class="empty-slot">
+      <strong>Up to you</strong>
+      <em>Email Pascal</em> to add a plan for the afternoon.
+    </div>
+
+    <h3>Evening</h3>
+    <div class="empty-slot">
+      <strong>Up to you</strong>
+      <em>Email Pascal</em> to add a plan for the evening.
+    </div>
+  </div>
+
+  <!-- ============ DAY 4 ============ -->
+  <div class="day">
+    <div class="day-header">
+      <div class="day-number">4</div>
+      <div>
+        <div class="day-title">Paris &rarr; Home</div>
+        <div class="day-date">Thursday, 16 July 2026</div>
+      </div>
+    </div>
+
+    <h3>Morning</h3>
+    <div class="empty-slot">
+      <strong>One last morning in Paris</strong>
+      <em>Email Pascal</em> with a final stop &mdash; a market, a caf&eacute;, a view &mdash; before the train home.
+    </div>
+
+    <!-- TRAIN BACK -->
+    <div class="transport">
+      <div class="transport-label">Train &mdash; Return</div>
+      <div class="transport-route">Paris Nord &rarr; Lille Flandres</div>
+      <div class="transport-details">
+        SNCF &nbsp;&bull;&nbsp; Departure <em>to be confirmed</em> &nbsp;&bull;&nbsp; Arrival <em>to be confirmed</em><br>
+        Reservation: <strong>DQZRMB</strong>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ PRACTICAL INFO ============ -->
+  <div class="day">
+    <div class="day-header">
+      <div class="day-number" style="background: var(--sea);">&infin;</div>
+      <div>
+        <div class="day-title">Practical Info</div>
+        <div class="day-date">Good to know</div>
+      </div>
+    </div>
+
+    <div class="info-box">
+      <strong>Getting around:</strong> The hotel is 2 min from m&eacute;tro <em>Brochant</em> (line 13) and 6 min from <em>La Fourche</em> (lines 13 and 13B). A carnet of 10 t+ tickets is around &euro;17 &mdash; better value than buying singles. The Navigo Easy card is a cheap reloadable alternative.
+    </div>
+
+    <div class="info-box">
+      <strong>Neighbourhood &mdash; Batignolles:</strong> A villagey corner of the 17<sup>th</sup>. Daily market on Rue Lemercier, Parc Martin Luther King for greenery, lots of cafés and small restaurants. Quiet by Paris standards, still very walkable to central sights.
+    </div>
+
+    <div class="info-box">
+      <strong>Money:</strong> Cards work almost everywhere, contactless included. Some small bakeries and markets still want cash &mdash; keep a few coins.
+    </div>
+
+    <div class="info-box">
+      <strong>Weather in mid-July:</strong> Typically 20&ndash;28&deg;C, occasional warmer days. Light clothes, comfortable shoes, a small bottle of water.
+    </div>
+
+    <h3>All Booking References</h3>
+
+    <div class="booking-ref" style="grid-template-columns: 1fr 1fr;">
+      <div>
+        <span class="ref-label">SNCF train</span><br>
+        <span class="ref-value">DQZRMB</span>
+      </div>
+      <div>
+        <span class="ref-label">ibis Styles Batignolles</span><br>
+        <span class="ref-value">QCHHDHHZ</span>
+      </div>
+    </div>
+
+    <h3>Emergency Numbers</h3>
+    <div class="info-box">
+      <strong>European emergency:</strong> 112<br>
+      <strong>ibis Styles Batignolles:</strong> +33 1 46 27 28 04<br>
+      <strong>Pascal:</strong> reachable any time
+    </div>
+  </div>
+</div>
+
+<!-- ============ FOOTER ============ -->
+<div class="footer">
+  Paris &nbsp;&bull;&nbsp; 13&ndash;16 July 2026 &nbsp;&bull;&nbsp; Louise, Aur&eacute;lie &amp; Anneleen
+  <div class="updated">Last updated automatically from email</div>
+</div>
+
+</body>
+</html>
